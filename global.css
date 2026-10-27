@@ -1,0 +1,22 @@
+:root{
+    --primary-color: #020202;
+  --dark-color: #3C3838;
+  --light-color: #232224;
+}
+
+
+
+
+
+
+@media (min-width:1024px) {
+    .page {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "aside-left main aside-right"
+        "footer footer footer"
+        ;
+        justify-content: space-around;
+    }
+}
