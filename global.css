@@ -2,6 +2,11 @@
     --primary-color: #020202;
   --dark-color: #3C3838;
   --light-color: #232224;
+  --font-color: #EDEDED;
+}
+body {
+    background-color: var(--primary-color);
+    color: var(--font-color);
 }
 
 
