@@ -71,6 +71,11 @@ main{
 #origins-img{
    mix-blend-mode: multiply;
 }
+/* Media */
+#media-photo{
+    height: 45vw;
+    justify-content: center;
+}
 /* Footer */
 .feet{
     display: flex;
