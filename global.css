@@ -2,7 +2,10 @@
     --primary-color: #020202;
   --dark-color: #3C3838;
   --light-color: #232224;
+  --contrast-color: #EDEDED;
   --font-color: #EDEDED;
+  
+  
 }
 /* Header/nav */
 nav{
@@ -15,14 +18,15 @@ nav{
     height: 5vw;
     position: sticky;
     top: 0;
+    border: 1px solid var(--contrast-color);
 }
 .link-tags{
     text-decoration: none;
     color: var(--font-color);
-    font-size: 2vw;
+    font-size: 1rem;
 }
 #title{
-    font-size: 5vw;
+    font-size: 1rem;
     color: var(--font-color);
 }
 #image-container{
@@ -35,6 +39,7 @@ nav{
     width: 50vw;
     height: 20vw;
     margin-top: 5vw;
+    border: 1px solid var(--contrast-color);
 }
 /* Homepage*/
 body {
@@ -56,6 +61,7 @@ main{
     border-radius: 1vw;
     width: 90vw;
     height: 32vw;
+    border: 1px solid var(--contrast-color);
 }
 .comic-img-container{
     height: 18vw;
@@ -63,31 +69,134 @@ main{
     margin-right: 5vw;
     border-radius: 1vw;
     margin-left: 5vw;
+    border: 1px solid var(--contrast-color);
 }
 .info-p{
-    font-size: 2.3vw;
+    font-size: 2vw;
     padding: 1vw;
 }
 #origins-img{
    mix-blend-mode: multiply;
 }
+/* Media */
+#media-photo{
+    height: 20vw;
+    width: 20vw;
+    border-radius: 1vw;
+    justify-content: center;
+}
+.media-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40vw;
+    background-color: var(--dark-color);
+    border-radius: 1vw;
+    margin:2vw;
+    border: 1px solid var(--contrast-color);
+}
+#image-container-media{
+    margin-bottom: 5vw;
+}
+.media-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.media-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.media-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40vw;
+    height: 40vw;
+    margin: 2vw;
+}
 /* Footer */
 .feet{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: var(--light-color);
-    height: 5vw;
+    min-height: 5vw;
+    height: auto;
     border-radius: 1vw;
     margin-left: 5vw;
     margin-right: 5vw;
     margin-top: 5vw;
     margin-bottom: 1vw;
+    padding: .75rem 1rem;
+    gap: .5rem;
+    border: 1px solid var(--contrast-color);
 }
 .footer-links{
     display: flex;
     justify-content: space-around;
     width: 50vw;
+}
+.footer-text{
+    font-size: .8rem;
+    color: var(--font-color);
+    margin: 0;
+}
+
+/* Facts page */
+.facts-main{
+    display: flex;
+    width: 100%;
+}
+.facts-content{
+    width: min(90vw, 1100px);
+    margin: 4rem auto;
+}
+.facts-content h2{
+    color: var(--font-color);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    text-align: center;
+    margin: 0 0 1.5rem;
+}
+.facts-table-wrap{
+    overflow-x: auto;
+    background-color: var(--dark-color);
+    border: 1px solid var(--contrast-color);
+    border-radius: 8px;
+}
+.facts-table{
+    width: 100%;
+    text-align: left;
+    line-height: 1.55;
+}
+.facts-table th,
+.facts-table td{
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--contrast-color);
+}
+.facts-table thead{
+    background-color: var(--light-color);
+}
+.facts-table thead th{
+    color: var(--font-color);
+    font-size: 1.05rem;
+}
+.facts-table tbody th{
+    width: 28%;
+    color: var(--font-color);
+    font-weight: 700;
+}
+.facts-table tbody tr:last-child th,
+.facts-table tbody tr:last-child td{
+    border-bottom: 0;
+}
+.facts-table tbody tr:nth-child(even){
+    background-color: var(--light-color);
 }
 
 
@@ -101,6 +210,15 @@ main{
         "info-container info-container"
         ;
     }
+    .media-main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "media-container media-container"
+        "media-container media-container"
+        ;
+       
+    }
     .info-container{
         background-color: var(--dark-color);
         text-align: center;
@@ -113,10 +231,20 @@ main{
         flex-direction: column; 
     }
     .info-p{
-        font-size: 1.5vw;
+        font-size: 2rem;
         padding: 1vw;
     }
     .comic-img-container{
        margin: 2vw;
+    }
+    #title{
+        font-size: 3rem;
+    }
+    .link-tags, .footer-text{
+        font-size: 2rem;
+    }
+    .footer-links{
+        width: 30vw;
+        font-size: 2rem;
     }
 }
